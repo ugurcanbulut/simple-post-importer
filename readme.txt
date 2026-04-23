@@ -33,10 +33,21 @@ Simple Post Importer lets you point at another WordPress site's URL, scan its pu
 
 == Installation ==
 
-1. Upload the plugin folder to `/wp-content/plugins/`.
-2. Run `composer install && npm install && npm run build` inside the plugin directory.
-3. Activate the plugin through the "Plugins" menu in WordPress.
-4. Go to **Tools → Simple Post Importer** to start.
+**Quick install (from GitHub release zip or a clone):**
+
+1. Upload the `simple-post-importer` folder to `/wp-content/plugins/` (or install the zip via **Plugins → Add New → Upload Plugin**).
+2. Activate **Simple Post Importer** through the Plugins screen.
+3. Go to **Tools → Simple Post Importer** to start.
+
+Pre-built assets live under `/build/` and the plugin ships with a PSR-4 fallback autoloader, so no build step is required to run it.
+
+**Developing the plugin:**
+
+```
+composer install   # optional — a fallback autoloader runs without it
+npm install
+npm run build      # or: npm start (watches and rebuilds)
+```
 
 == Changelog ==
 
